@@ -1,3 +1,15 @@
+div {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+html {
+    line-height: 1.15;
+}
+
 .main-background {
     width: 100%;
     height: 500px;
@@ -27,5 +39,21 @@
     border: none;
     border-radius: 5px;
     position: relative;
-    bottom: 10px;
+    bottom: 10px;   
+}
+.explain-box {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+    position: relative;
+    top: -40px;
+}
+input[type=text] {
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
