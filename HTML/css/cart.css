@@ -1,0 +1,80 @@
+div, td, tr {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.cart-background {
+    width: 100%;
+    background-color: #c2d3de;
+    padding: 30px;
+}
+
+.cart-bg {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    font-family: montserrat;
+}
+
+.cart-table {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.cart-table td, .cart-table th{
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
+}
+
+.cart-table th:nth-child(2) {
+    width: 400px;
+}
+
+.cart-table th:nth-child(4), .cart-table th:nth-child(5) {
+    width: 100px;
+}
+
+.btn {
+    float: right;
+    width: 220px;
+    height: 50px;
+    border: none;
+    background-color: #133761;
+    color: white;
+    font-family: montserrat;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: chocolate;
+}
+
+.btn:focus {
+    background-color: grey;
+}
+
+.btn:active {
+    background-color: brown;
+}
+
+.add-font {
+    float: left;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.add-font:link {
+    color: violet;
+}
+
+.add-font:visited {
+    color: black;
+}

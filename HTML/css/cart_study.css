@@ -1,0 +1,76 @@
+body {
+    margin: 0px;
+}
+
+tr {
+    border: 1px solid #b2ccd6 
+}
+
+div, td, tr {
+    box-sizing: border-box;
+}
+
+tr,td {
+    margin: 10px;
+}
+
+.container-box {
+    padding: 30px;
+    background-color: #b2ccd6;
+    font-family: Montserrat;
+}
+
+.inner-box {
+    margin: auto;
+    border: 30px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.title-font {
+    color: #133761;
+}
+
+.main-table {
+    background-color: white;
+    color: #b2ccd6;
+    border-radius: 5px;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.table-top {
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+}
+
+.add-font {
+    float: left;
+    margin-top: 20px;
+}
+
+.choose-button {
+    float: right;
+    width: 220px;
+    height: 50px;
+    border: none;
+    background-color: #133761;
+    color: white;
+    font-family: montserrat;
+    margin-top: 10px;
+}
+
+.img-style {
+    width: 80px;
+    padding: 10px;
+}
+
+.logo-style {
+    width: 10%;
+    vertical-align: middle;
+}
+
+.table-middle {
+    float: left;
+}

@@ -9,31 +9,31 @@
 <body>
     <div class="container">
         <div class="main-box">
-            <div class="inner-box">
-                <div class="contact-us-box">
-                    <h3 class="main-text">contact us</h3>
-                </div>
-                <div class="Email-box">
+            <form>
+                <div class="w-100">
+                    <h3>Contact us</h3>
                     <p>Your Email</p>
-                    <form>
-                        <input type="text" placeholder="email@example.com">
-                    </form>
+                    <input class="form-input" type="email" placeholder="email@example.com">
                 </div>
-                <div class="firstname-box">
-                    <p>First name</p><form><input type="text"></form>
-                </div><div class="lastname-box"><p>Last name</p><form><input type="text"></form></div>
-                <div class="message-box">
+                <div class="w-50">
+                    <p>First name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div class="w-50">
+                    <p>Last name</p>
+                    <input class="form-input" type="text">
+                </div>
+                <div style="clear: both;"></div>
+                <div class="w-100">
                     <p>Message</p>
-                    <form>
-                        <input type="text">
-                    </form>
+                    <textarea class="form-input"></textarea>
                 </div>
-                <div class="subscribe-box">
-                    <form>
-                        <input type="checkbox"><p>Subscribe</p>
-                    </form>
+                <div class="w-100">
+                    <input id="sub" type="checkbox">
+                    <label for="sub">Subscribe</label>
+                    <button class="form-button">SEND</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </body>

@@ -1,13 +1,13 @@
-div {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0px;
 }
 
 html {
     line-height: 1.15;
+}
+
+div, input, textarea {
+    box-sizing: border-box;
 }
 
 .main-background {
@@ -18,7 +18,6 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     padding: 1px;
-    text-align: center;
     color: white;
 }
 .main-title {
@@ -51,9 +50,53 @@ html {
     position: relative;
     top: -40px;
 }
-input[type=text] {
+/* input[type=text] {
     padding: 20px;
     font-size: 20px;
     border: 2px solid black;
     border-radius: 5px;
+} */
+
+.form-background {
+    background-color: black;
+    padding: 30px;
+}
+
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    font-family: Pretendard;   
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.w-100 {
+    width: 100%;
+    padding: 10px;
+}
+
+.yellow-button {
+    display: block;
+    margin-left: auto;
+    float: right;
+    background-color: rgb(253, 220, 72);
+    border: none;
+    width: 100px;
+    height: 30px;
+    color:white;
 }
