@@ -100,7 +100,6 @@ p {
     text-align: center;
 }
 
-
 .portfolio-container {
     max-width: 1200px;
     margin: auto;
@@ -165,6 +164,35 @@ p {
     float: left;
     background-size: cover;
 }
+
+.footer-box {
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px;
+    width: 100%;
+}
+
+.footer-icon-container {
+    display: flex;
+}
+
+.footer-icon-container div {
+    width: 33%;
+    text-align: center;
+}
+
+.footer-icon {
+    padding: 25px;
+    background: #4e61c0;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 150px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+
 
 @media screen and (max-width : 992px) {
     .main-text {
