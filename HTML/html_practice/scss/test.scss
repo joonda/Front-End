@@ -1,0 +1,80 @@
+@use "reset";
+
+$main-color : #2a4cb2;
+$sub-color : #eeeeee;
+$basic-size : 16px;
+
+.background {
+    background-color: $main-color;
+    font-size: ($basic-size - 2px);
+}
+
+.box {
+    color: $main-color;
+    font-size: ($basic-size + 2px);
+}
+
+.list-style{
+    li {
+        list-style: none;
+        padding: 15px;
+        border: 1px solid lightgrey;  
+        width: 400px; 
+        margin: auto;
+    }
+}
+
+.active:hover {
+    background-color: skyblue;
+}
+
+%alert-box {
+    border-radius: 3px;
+    padding: 5px 5px 10px 20px;
+    width: 700px;
+    margin: auto;
+    border: 1px solid lightgrey;
+}
+
+.alert-box-green {
+    @extend %alert-box;
+    background-color: rgb(147, 194, 147);
+}
+
+.alert-box-blue {
+    @extend %alert-box;
+    background-color: rgb(147, 171, 194);
+}
+
+.alert-box-yellow {
+    @extend %alert-box;
+    background-color: rgb(187, 194, 147);
+}
+
+span {
+    font-weight: bold;
+}
+
+@mixin col($ratio){
+    float: left;
+    width: $ratio;
+    padding: 15px;
+    background-color: pink;
+    border: lightgrey solid 1px;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.row {
+    .col-6 {
+        @include col(50%);
+    }
+    .col-4{
+        @include col(33.33%);
+    }
+    .col-3{
+        @include col(25%);
+    }
+}
