@@ -1,0 +1,61 @@
+@use "./reset";
+
+.side-bar {
+    transition: all 0.5s;
+    position: fixed;
+    width: 150px;
+    background: #484bb3;
+    height: 100%;
+    color: white;
+    z-index: 5;
+    transform: translateX(-100px);
+} 
+
+.side-bar div {
+    padding: 15px;
+}
+
+.side-bar span {
+    margin: 10px;
+}
+
+.side-bar:hover {
+    transform: translateX(0px);
+}
+
+
+.side-bar i {
+    transition: all 0.5s;
+    transform: translateX(100px);
+}
+
+.side-bar:hover i {
+    transform: translateX(0px);
+}
+
+.main-container {
+    margin-left: 50px;
+}
+
+.input-animation {
+    transition: width 0.5s;
+    width: 150px;
+}
+
+.input-animation:focus {
+    width: 300px;
+}
+
+.main-container i {
+    margin-right: 10px;
+}
+
+.content {
+    padding: 30px;
+}
+
+.card i {
+    float: right;
+    font-size: 30px;
+    margin-top: -45px;
+}
