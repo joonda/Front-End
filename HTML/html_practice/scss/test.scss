@@ -1,8 +1,9 @@
-@use "reset";
+@use "_reset";
 
 $main-color : #2a4cb2;
 $sub-color : #eeeeee;
 $basic-size : 16px;
+
 
 .background {
     background-color: $main-color;
@@ -77,4 +78,131 @@ span {
     .col-3{
         @include col(25%);
     }
+}
+
+.ani-text {
+    text-align: center;
+}
+
+.ani-text:hover {
+    animation-name: moving;
+    animation-duration: 1s;    
+}
+
+@keyframes moving {
+    0% {
+        transform: translateX(0px);
+    }
+
+    33% {
+        transform: translateX(-100px);
+    }
+
+    66% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.shake-button {
+    border: none;
+    border-radius: 5px;
+    background-color: #7C00FE;
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.shake-button:hover {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.rotation {
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.rotation:hover {
+    animation-name: ani-rotation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes ani-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(1.5);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-250px);
+    }
+    50% {
+        transform: translateX(20px) skew(-30deg);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.ani-navbar:hover p {
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ani-navbar:hover {
+    transform: translateX(0px);
+    text-align: center;
+}
+
+.ani-navbar {
+    width: 200px;
+    background: black;
+    color: white;
+    height: 100%;
+    padding: 25px;
+    position: fixed;
+    z-index: 5;
+    text-align: right;
+    transition: all 1s;
+    transform: translateX(-150px);
 }

@@ -1,53 +1,11 @@
 body {
   margin: 0px;
   font-family: Pretendard;
+  padding: 0px;
 }
 
 div {
   box-sizing: border-box;
-}
-
-.btn-blue, .btn-red, .btn-green {
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-}
-
-.box-skyblue, .box-red, .box-green {
-  width: 200px;
-  height: 200px;
-  padding: 20px;
-}
-
-.box-green {
-  background-color: green;
-}
-
-.box-red {
-  background-color: red;
-}
-
-.box-skyblue {
-  background-color: skyblue;
-}
-
-.btn-green {
-  color: green;
-}
-
-.btn-red {
-  color: red;
-}
-
-.btn-blue {
-  color: blue;
-}
-
-.main-bg h4 {
-  font-size: 16px;
-}
-.main-bg button {
-  color: red;
 }
 
 .background {
@@ -58,22 +16,6 @@ div {
 .box {
   color: #2a4cb2;
   font-size: 18px;
-}
-
-h2 {
-  font-size: 30px;
-  letter-spacing: -3px;
-  color: brown;
-}
-
-h3 {
-  font-size: 20px;
-  letter-spacing: -2px;
-}
-
-h4 {
-  font-size: 10px;
-  letter-spacing: -1px;
 }
 
 .list-style li {
@@ -88,28 +30,24 @@ h4 {
   background-color: skyblue;
 }
 
-.alert-box-green {
+.alert-box-yellow, .alert-box-blue, .alert-box-green {
   border-radius: 3px;
   padding: 5px 5px 10px 20px;
-  background-color: rgb(147, 194, 147);
   width: 700px;
   margin: auto;
+  border: 1px solid lightgrey;
+}
+
+.alert-box-green {
+  background-color: rgb(147, 194, 147);
 }
 
 .alert-box-blue {
-  border-radius: 3px;
-  padding: 5px 5px 5px 20px;
   background-color: rgb(147, 171, 194);
-  width: 700px;
-  margin: auto;
 }
 
 .alert-box-yellow {
-  border-radius: 3px;
-  padding: 5px 5px 5px 20px;
   background-color: rgb(187, 194, 147);
-  width: 700px;
-  margin: auto;
 }
 
 span {
@@ -127,7 +65,6 @@ span {
   background-color: pink;
   border: lightgrey solid 1px;
 }
-
 .row .col-4 {
   float: left;
   width: 33.33%;
@@ -135,11 +72,122 @@ span {
   background-color: pink;
   border: lightgrey solid 1px;
 }
-
 .row .col-3 {
   float: left;
   width: 25%;
   padding: 15px;
   background-color: pink;
   border: lightgrey solid 1px;
+}
+
+.ani-text {
+  text-align: center;
+}
+
+.ani-text:hover {
+  animation-name: moving;
+  animation-duration: 1s;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0px);
+  }
+  33% {
+    transform: translateX(-100px);
+  }
+  66% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.shake-button {
+  border: none;
+  border-radius: 5px;
+  background-color: #7C00FE;
+  color: white;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.shake-button:hover {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.rotation {
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.rotation:hover {
+  animation-name: ani-rotation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ani-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(45deg) scale(1.5);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-250px);
+  }
+  50% {
+    transform: translateX(20px) skew(-30deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.ani-navbar:hover p {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.ani-navbar:hover {
+  transform: translateX(0px);
+  text-align: center;
+}
+
+.ani-navbar {
+  width: 200px;
+  background: black;
+  color: white;
+  height: 100%;
+  padding: 25px;
+  position: fixed;
+  z-index: 5;
+  text-align: right;
+  transition: all 1s;
+  transform: translateX(-150px);
 }/*# sourceMappingURL=test.css.map */
