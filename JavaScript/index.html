@@ -15,37 +15,50 @@
      2. 필요할 때 보여달라고 코드를 짠다 (javascript)-->
 
     <div class="alert-box-skyblue" id="btn1">
-        <span>
-            <span style="font-weight:bold;">Lorem ipsum dolor</span> sit amet consectetur, adipisicing elit.
+        <span style="font-weight:bold;" id="title">
+            Lorem ipsum dolor
         </span>
-        <i class="fa-solid fa-xmark x-btn" onclick="closeAlert('btn1')"></i>
+        <i class="fa-solid fa-xmark x-btn" id="close"></i>
     </div>
     <div class="alert-box-green" id="btn2">
         <span>
             <span style="font-weight:bold;">Lorem ipsum dolor</span> sit amet consectetur, adipisicing elit.
         </span>
-        <i class="fa-solid fa-xmark x-btn" onclick="closeAlert('btn2')"></i>
+        <i class="fa-solid fa-xmark x-btn" onclick="btnAlert('btn2', 'none')"></i>
     </div>
     <div class="alert-box-grey" id="btn3">
         <span>
             <span style="font-weight:bold;">Lorem ipsum dolor</span> sit amet consectetur, adipisicing elit.
         </span>
-        <i class="fa-solid fa-xmark x-btn" onclick="closeAlert('btn3')"></i>
+        <i class="fa-solid fa-xmark x-btn" onclick="btnAlert('btn3', 'none')"></i>
     </div>
-    <button onclick="openAlert()" class="click-box">
+    <button onclick="changeContent('btn1', 'Input ID' ,'block')" class="click-box">
         <span>
-            Open
+            Open1
+        </span>
+    </button>
+    <button onclick="changeContent('btn1', 'Input Password' ,'block')" class="click-box">
+        <span>
+            Open2
         </span>
     </button>
 
+
     <script>
-        function openAlert(){
-            document.getElementById('btn1').style.display='block';
+        /*eventlistener -> click, keydown, scroll, mouseover*/
+        document.getElementById('close').addEventListener('click', function() {
+            document.getElementById('btn1').style.display='none';
+        });
+
+        function btnAlert(btn_id, on_off) {
+            document.getElementById(btn_id).style.display=on_off;
+        } 
+
+        function changeContent(btn_id, content, on_off) {
+            document.getElementById('title').innerHTML = content
+            document.getElementById(btn_id).style.display=on_off;
         }
-        
-        function closeAlert(btn_id) {
-            document.getElementById(btn_id).style.display='none';
-        }
+
     </script>
 </body>
 
