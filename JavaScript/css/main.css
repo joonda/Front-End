@@ -8,10 +8,41 @@ div {
   box-sizing: border-box;
 }
 
-.alert-box {
-  background-color: skyblue;
+.alert-box-grey, .alert-box-green, .alert-box-skyblue {
   padding: 20px;
   color: white;
   border-radius: 5px;
+  width: 700px;
+  margin-bottom: 10px;
+}
+
+.alert-box-skyblue {
+  background-color: skyblue;
   display: none;
+}
+
+.alert-box-green {
+  background-color: greenyellow;
+}
+
+.alert-box-grey {
+  background-color: grey;
+}
+
+.click-box {
+  border: none;
+  padding: 10px;
+  background-color: rgb(255, 61, 61);
+  color: white;
+}
+
+.click-box:hover {
+  background-color: rgb(255, 141, 141);
+}
+
+.x-btn {
+  float: right;
+  color: rgb(54, 54, 54);
+  font-size: 24px;
+  margin-top: -2px;
 }/*# sourceMappingURL=main.css.map */
