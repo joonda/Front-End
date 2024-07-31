@@ -18,25 +18,35 @@
         <span>
             <span style="font-weight:bold;">Lorem ipsum dolor</span> sit amet consectetur, adipisicing elit.
         </span>
-        <i class="fa-solid fa-xmark x-btn" onclick="document.getElementById('btn1').style.display='none'"></i>
+        <i class="fa-solid fa-xmark x-btn" onclick="closeAlert('btn1')"></i>
     </div>
     <div class="alert-box-green" id="btn2">
         <span>
             <span style="font-weight:bold;">Lorem ipsum dolor</span> sit amet consectetur, adipisicing elit.
         </span>
-        <i class="fa-solid fa-xmark x-btn" onclick="document.getElementById('btn2').style.display='none'"></i>
+        <i class="fa-solid fa-xmark x-btn" onclick="closeAlert('btn2')"></i>
     </div>
     <div class="alert-box-grey" id="btn3">
         <span>
             <span style="font-weight:bold;">Lorem ipsum dolor</span> sit amet consectetur, adipisicing elit.
         </span>
-        <i class="fa-solid fa-xmark x-btn" onclick="document.getElementById('btn3').style.display='none'"></i>
+        <i class="fa-solid fa-xmark x-btn" onclick="closeAlert('btn3')"></i>
     </div>
-    <button onclick="document.getElementById('btn1').style.display='block';" class="click-box">
+    <button onclick="openAlert()" class="click-box">
         <span>
             Open
         </span>
     </button>
+
+    <script>
+        function openAlert(){
+            document.getElementById('btn1').style.display='block';
+        }
+        
+        function closeAlert(btn_id) {
+            document.getElementById(btn_id).style.display='none';
+        }
+    </script>
 </body>
 
 </html>
