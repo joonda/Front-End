@@ -1,12 +1,4 @@
-body {
-  margin: 0px;
-  font-family: Pretendard;
-  padding: 0px;
-}
-
-div {
-  box-sizing: border-box;
-}
+@use "./basic";
 
 .list-group {
   visibility: hidden;
@@ -52,6 +44,7 @@ div {
 .show-modal {
   visibility: visible;
   opacity: 1;
+
 }
 
 .badge {
@@ -65,4 +58,19 @@ div {
 .dark {
   background: black;
   color: white;
-}/*# sourceMappingURL=03.css.map */
+}
+
+.slide-container {
+    // browser 폭 
+    width: 300vw;
+    transition: all 1s;
+}
+
+.slide-box {
+    width: 100vw;
+    float: left;
+}
+
+.slide-box img{
+    width: 100%;
+}
