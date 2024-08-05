@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- css file -->
-    <link href="./css/03.css" , rel="stylesheet">
+    <link href="./css/04.css" , rel="stylesheet">
 
     <!-- Jquery library -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -41,7 +41,9 @@
                 <span class="navbar-brand">Navbar</span>
             </div>
             <div>
+                <!-- dark mode -->
                 <span class="badge bg-light"> Light 🔄</span>
+                <!-- toggle -->
                 <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -61,12 +63,30 @@
     <!-- main box -->
     <div class="main-bg">
         <h4>Shirts on Sale</h4>
-        <button id="login" class="btn btn-danger">LOGIN</button>
+        <button id="login" class="btn btn-danger">Login</button>
     </div>
 
-    <div class="alert alert-danger">
-        <span id="num">5</span>초 이내 구매시 사은품 증정!
+    <!-- image carousel -->
+    <div style="overflow: hidden;">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="./img/car1.png">
+            </div>
+            <div class="slide-box">
+                <img src="./img/car2.png">
+            </div>
+            <div class="slide-box">
+                <img src="./img/car3.png">
+            </div>
+        </div>
     </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="next">Next</button>
+    <button class="before">Before</button>
+
 
     <script>
         // nav-bar 여닫기
@@ -117,16 +137,10 @@
                 alert('비밀번호에 대문자가 1개라도 들어가 있어야 합니다.');
             }
 
-
-            
         });
-        // input == change
-        document.getElementById('identify').addEventListener('input', function () {
-            console.log('안녕')
-        })
-
         var clickcount = 0;
 
+        // Dark mode
         $('.badge').on('click', function () {
             clickcount++;
             console.log(clickcount);
@@ -144,25 +158,65 @@
                 $('body').addClass('dark')
             }
         });
-        // let -> 재선언 불가
-        let name = 'kim';
 
-        // const -> 재선언 불가
-        // 재할당까지 불가.
-        const name2 = 'park';
+        // image carousel
 
-        setTimeout(function () {
-            $('.alert').hide();
-        }, 5000)
+        var now = 1;
 
-        // 경고 메시지 5초 뒤 사라지게 하기.
-        var count = 5;
-        setInterval(function () {
-            count -= 1;
-            if (count >= 0) {
-                $('#num').html(count);
+        $('.next').on('click', function() {
+            $('.slide-container').css('transform', 'translateX(-'+now+'00vw)');
+            now++;
+
+            if (now == 3) {
+                now = 0;
             }
-        }, 1000);
+        })
+
+        // $('.next').on('click', function() {
+        //     if (now == 1) {
+        //         $('.slide-container').css('transform', 'translateX(-100vw)');
+        //         now++;
+        //     }
+        //     else if (now == 2) {
+        //         $('.slide-container').css('transform', 'translateX(-200vw)');
+        //         now++;
+        //     }
+        //     else if (now == 3) {
+        //         $('.slide-container').css('transform', 'translateX(0vw)');
+        //         now = 1;
+        //     }
+        // })
+
+        $('.before').on('click', function() {
+            if (now == 1) {
+                $('.slide-container').css('transform', 'translateX(-200vw)');
+                now = 3;
+            }
+            else if (now == 3) {
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                now = 2;
+            }
+            else if (now == 2) {
+                $('.slide-container').css('transform', 'translateX(0vw)');
+                now = 1;
+            }
+        })
+
+        $('.slide-1').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(0vw)');
+            now = 1;
+        })
+
+        $('.slide-2').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-100vw)');
+            now = 2;
+        })
+
+        $('.slide-3').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-200vw)');
+            now = 3;
+        })
+
     </script>
 </body>
 

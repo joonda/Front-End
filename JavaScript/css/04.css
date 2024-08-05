@@ -65,4 +65,18 @@ div {
 .dark {
   background: black;
   color: white;
-}/*# sourceMappingURL=03.css.map */
+}
+
+.slide-container {
+  width: 300vw;
+  transition: all 1s;
+}
+
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 100%;
+}/*# sourceMappingURL=04.css.map */
