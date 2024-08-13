@@ -51,6 +51,7 @@
         </div>
     </nav>
 
+
     <!-- nav-bar-list -->
     <ul class="list-group">
         <li class="list-group-item">An item</li>
@@ -87,8 +88,38 @@
     <button class="next">Next</button>
     <button class="before">Before</button>
 
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatibus voluptate commodi tempore quasi
+        facere ab, corrupti praesentium aliquam quam nisi aperiam vel harum nesciunt, aliquid dolorum fuga ipsa
+        voluptates.
+    </div>
+
+    <div style="height: 1000px;">
+
+    </div>
 
     <script>
+        
+        // 모든 스크롤을 다 내리면, 알림창 띄우기
+        $('.lorem').on('scroll', function() {
+            var v1 = document.querySelector('.lorem').scrollTop;
+            var v2 = document.querySelector('.lorem').scrollHeight;
+            var v3 = document.querySelector('.lorem').clientHeight;
+            if (v1+v3 > v2-10) {
+                alert('동의 여부 확인')
+            } 
+        });
+        // scroll 내리면, 로고 사이즈 줄이기
+        // 반대로 맨 위로 올리면 로고 사이즈 원상복귀
+        $(window).on('scroll', function () {
+            if (window.scrollY > 100) {
+                $(".navbar-brand").css('font-size', '20px');
+            }
+            else {
+                $('.navbar-brand').css('font-size', '30px')
+            }
+        });
+
         // nav-bar 여닫기
         $(".navbar-toggler").on('click', function () {
             $(".list-group").toggleClass('show-list');
@@ -163,8 +194,8 @@
 
         var now = 1;
 
-        $('.next').on('click', function() {
-            $('.slide-container').css('transform', 'translateX(-'+now+'00vw)');
+        $('.next').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-' + now + '00vw)');
             now++;
 
             if (now == 3) {
@@ -187,7 +218,7 @@
         //     }
         // })
 
-        $('.before').on('click', function() {
+        $('.before').on('click', function () {
             if (now == 1) {
                 $('.slide-container').css('transform', 'translateX(-200vw)');
                 now = 3;
