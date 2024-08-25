@@ -40,6 +40,14 @@
         <button id="login" class="btn btn-danger">Login</button>
     </div>
 
+    <div class="container mt-3">
+        <div class="card p-3">
+            <div>
+                <span class="car-product">상품명</span> / <span class="car-price">50000</span>
+            </div>
+        </div>
+    </div>
+
     <div class="progress-bar">
         <div class="progress-stat"></div>
     </div>
@@ -67,6 +75,13 @@
 
 
     <script>
+
+        // var car = ['Sonata', 50000, "White"];
+        var car2 = {name : "Avante", price : [50000, 30000, 40000]};
+
+        document.querySelector(".car-product").innerHTML = car2.name;
+        document.querySelector(".car-price").innerHTML = car2["price"][0]; 
+
         // scroll progress bar
         $(window).on('scroll', function () {
             const scroll_cur = document.querySelector('html').scrollTop;
