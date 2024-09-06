@@ -105,6 +105,6 @@ div {
   display: block;
 }
 
-.hide-form {
-  display: none;
+.form-hide {
+  display: none !important;
 }/*# sourceMappingURL=05.css.map */
