@@ -103,4 +103,8 @@ div {
 
 .show {
   display: block;
+}
+
+.hide-form {
+  display: none;
 }/*# sourceMappingURL=05.css.map */

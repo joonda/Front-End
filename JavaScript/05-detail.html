@@ -51,6 +51,22 @@
     <div class="progress-bar">
         <div class="progress-stat"></div>
     </div>
+
+    <form class="container my-5 form-group">
+        <p>상품선택</p>
+        <select class="form-select mt-2">
+            <option>모자</option>
+            <option>셔츠</option>
+        </select>
+
+        <select class="form-select mt-2 hide-form">
+            <option>95</option>
+            <option>100</option>
+        </select>
+    </form>
+
+
+
     <div class="content">
         <div class="container mt-5">
             <ul class="list">
@@ -76,11 +92,13 @@
 
     <script>
 
+
+
         // var car = ['Sonata', 50000, "White"];
-        var car2 = {name : "Avante", price : [50000, 30000, 40000]};
+        var car2 = { name: "Avante", price: [50000, 30000, 40000] };
 
         document.querySelector(".car-product").innerHTML = car2.name;
-        document.querySelector(".car-price").innerHTML = car2["price"][0]; 
+        document.querySelector(".car-price").innerHTML = car2["price"][0];
 
         // scroll progress bar
         $(window).on('scroll', function () {
