@@ -57,14 +57,15 @@
         <select class="form-select mt-2">
             <option>모자</option>
             <option>셔츠</option>
+            <option>바지</option>
         </select>
         <!-- hide attach -->
         <select class="form-select mt-2 form-hide">
             <option>95</option>
             <option>100</option>
         </select>
-
     </form>
+
 
 
 
@@ -92,21 +93,36 @@
 
 
     <script>
+        
+        var pants = [28, 30, 32, 34];
+        var shirts = [95, 100, 105, 110];
+
         $(".form-select").eq(0).on("input", function (e) {
             let value = e.currentTarget.value;
 
             if (value == "셔츠") {
                 $('.form-select').eq(1).removeClass("form-hide");
-            }
+                $('.form-select').eq(1).html("");
 
+                shirts.forEach(function(size) {
+                    $(".form-select").eq(1).append(`<option>${size}</option>`);
+                })
+                
+            }
+            else if (value == "바지") {
+                $('.form-select').eq(1).removeClass("form-hide");
+                $(".form-select").eq(1).html('');
+                // array에 붙일 수 있는 반복문
+                pants.forEach(function(size) {
+                    $(".form-select").eq(1).append(`<option>${size}</option>`);
+                })
+            }
             else {
                 $(".form-select").eq(1).addClass("form-hide");
             }
         })
 
-
-
-
+       
 
         // var car = ['Sonata', 50000, "White"];
         var car2 = { name: "Avante", price: [50000, 30000, 40000] };
@@ -184,6 +200,29 @@
                 alert('비밀번호에 대문자가 1개라도 들어가 있어야 합니다.');
             }
         });
+
+        function avg_cal(arr, b) {
+            var sum = 0
+
+            for (var i=0; i<arr.length; i++) {
+                sum = sum + arr[i];
+            }
+
+            if (sum/arr.length > b) {
+                console.log(`평균보다 ${(sum/arr.length)-b} 점 올랐네요`);
+            }
+            else if (sum/arr.length < b) {
+                console.log(`평균보다 ${b-(sum/arr.length)} 점 떨어졌네요`);
+            }
+            else {
+                console.log(`이전 평균과 같네요`);
+            }
+        }
+
+        avg_cal([40,40,40], 20);
+        avg_cal([40,40,40], 40);
+        avg_cal([20,25,31,12,35], 20);
+        
     </script>
 </body>
 
