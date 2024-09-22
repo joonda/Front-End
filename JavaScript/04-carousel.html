@@ -71,7 +71,7 @@
     <div style="overflow: hidden;">
         <div class="slide-container">
             <div class="slide-box">
-                <img src="./img/car1.png">
+                <img src="./img/car1.png" draggable="false">
             </div>
             <div class="slide-box">
                 <img src="./img/car2.png">
@@ -247,6 +247,73 @@
             $('.slide-container').css('transform', 'translateX(-200vw)');
             now = 3;
         })
+
+        var start = 0;
+        var click_check = false;
+        
+        $('.slide-box').eq(0).on('mousedown', function (e) {
+            start = e.clientX
+            click_check = true;
+        });
+
+        $('.slide-box').eq(0).on('mousemove', function (e) {
+            if (click_check == true) {
+                $('.slide-container').css('transform', 
+                `translateX(${e.clientX - start}px)`)
+            }
+
+        });
+
+        $('.slide-box').eq(0).on('mouseup', function(e) {
+            click_check = false;
+
+            if (e.clientX - start < -100) {
+                $('.slide-container')
+                .css('transition', 'all 0.5s')
+                .css('transform',
+                    'translateX(-100vw)')                    
+            } else {
+                $('.slide-container').css('transform',
+                    'translateX(0vw)');
+            }
+            setTimeout(() => {
+                $('.slide-container').css('transition', 'none')
+            }, 500)
+        });
+
+
+        var start = 0;
+        var click_check = false;
+        
+        $('.slide-box').eq(0).on('touchdown', function (e) {
+            start = e.touches[0].clientX
+            click_check = true;
+        });
+
+        $('.slide-box').eq(0).on('touchmove', function (e) {
+            if (click_check == true) {
+                $('.slide-container').css('transform', 
+                `translateX(${e.touches[0].clientX - start}px)`)
+            }
+
+        });
+
+        $('.slide-box').eq(0).on('touchend', function(e) {
+            click_check = false;
+
+            if (e.changedTouches[0].clientX - start < -100) {
+                $('.slide-container')
+                .css('transition', 'all 0.5s')
+                .css('transform',
+                    'translateX(-100vw)')                    
+            } else {
+                $('.slide-container').css('transform',
+                    'translateX(0vw)');
+            }
+            setTimeout(() => {
+                $('.slide-container').css('transition', 'none')
+            }, 500)
+        });
 
     </script>
 </body>
