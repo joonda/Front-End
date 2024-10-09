@@ -1,0 +1,30 @@
+.profile {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center; 
+    font-size: 16px;
+}
+
+.content {
+    text-align: center;
+}
+
+.box {
+    width: 200px;
+    background: cadetblue;
+    /* 상,하,좌,우 여백 */
+    margin: 10px;
+    /* 상,하,좌,우 안쪽 여백 */
+    padding: 40px;
+    border-radius: 5px;
+    /* display : block -> 가로행을 전부 차지 */
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    box-shadow: 5px 5px black;
+}
