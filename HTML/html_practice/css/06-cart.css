@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    background: lightblue;
+    padding: 20px;
+}
+
+.title {
+    color: cornflowerblue;
+}
+
+tr {
+    padding: 10px;
+}
+
+td, th {
+    border-bottom: 1px solid #c2d3de;
+}
+
+table {
+    padding: 10px;
+}
+
+.table_container {
+    width: 80%;
+    max-width: 650px;
+    margin: auto;
+}
+
+.product {
+    width: 100px;
+    padding: 15px;
+}
+
+.logo {
+    width: 70px;
+    padding-top: 10px;
+}
+
+.product_name {
+    margin-top: 0;
+}
+
+.text-right {
+    text-align: right;
+    padding: 15px;
+}
+
+
+table {
+    background: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.btn {
+    border-radius: 5px;
+    border: none;
+    background-color: navy;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: chocolate;
+}
+
+.btn:focus {
+    background-color: aqua;
+}
+
+.btn:active {
+    background-color: brown;
+}
+
+.custom-link {
+    text-decoration: none;
+}
+
+.custom-link:link {
+    color: white;
+}
+
+.custom-link:visited {
+    color: violet;
+}
+
+.input_test {
+    font-size: 20px;
+    border: none;
+}
+
