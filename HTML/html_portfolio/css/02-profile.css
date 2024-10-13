@@ -1,0 +1,60 @@
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+p, h3, h4, span {
+    font-family: 'Pretendard';
+}
+
+.white_box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.middle_section {
+    padding: 20px;
+    margin: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.pill {
+    border: 1px solid lightgrey;
+    padding: 3px 12px 7px 12px;
+    margin-right: 2px;
+    border-radius: 100px;
+}
+
+.blue_btn {
+    padding: 6px 15px;
+    background-color: #70B9F7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.blue {
+    color: #70B9F7
+}
+
+.photo {
+    width: 65px;
+    margin-top: 3px;
+}
+
+.align_center {
+    text-align: center;
+}
+
+.skills {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid lightgrey;
+}
+
+.pill_div {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}

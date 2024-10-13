@@ -56,6 +56,11 @@ body {
     width: 150px;
 }
 
+.main_button:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+
 .explain_box {
     background: #eeeeee;
     max-width: 600px;
@@ -67,6 +72,23 @@ body {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+.pseudo::first-line {
+    color: red;
+    font-size: 20px;
+}
+
+.pseudo::after {
+    content:"Hello";
+    color: red;
+    font-size: 20px;
+}
+
+.pseudo::before {
+    content:"Bye";
+    color: lightblue;
+    font-size: 20px;
 }
 
 .text_input {
