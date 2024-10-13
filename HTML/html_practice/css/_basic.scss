@@ -16,7 +16,7 @@ div {
     flex-wrap: wrap;
 
     .col-1 {
-        @include columns(8.33)
+        @include columns(8.33%)
     }
 
     .col-2 {

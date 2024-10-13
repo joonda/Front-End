@@ -11,9 +11,8 @@ div {
   display: flex;
   flex-wrap: wrap;
 }
-
 .row .col-1 {
-  width: 8.33;
+  width: 8.33%;
 }
 .row .col-2 {
   width: 16.67%;
