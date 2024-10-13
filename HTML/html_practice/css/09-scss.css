@@ -1,0 +1,86 @@
+body {
+  margin: 0px;
+  font-family: "Pretendard";
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row .col-1 {
+  width: 8.33;
+}
+.row .col-2 {
+  width: 16.67%;
+}
+.row .col-3 {
+  width: 25%;
+}
+.row .col-4 {
+  width: 33.33%;
+}
+.row .col-5 {
+  width: 41.67%;
+}
+.row .col-6 {
+  width: 50%;
+}
+.row .col-7 {
+  width: 58.33%;
+}
+.row .col-8 {
+  width: 66.67%;
+}
+.row .col-9 {
+  width: 75%;
+}
+.row .col-10 {
+  width: 83.33%;
+}
+.row .col-11 {
+  width: 91.67%;
+}
+.row .col-12 {
+  width: 100%;
+}
+
+.list li {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0px;
+  width: 400px;
+  border: 0.5px solid #eee;
+}
+.list .active:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.box_yellow, .box_blue, .box_green {
+  width: 700px;
+  padding: 20px;
+  margin: 10px;
+}
+.box_yellow p, .box_blue p, .box_green p {
+  margin: 0px;
+}
+
+.box_green {
+  color: black;
+  background-color: #DFEFD8;
+}
+
+.box_blue {
+  color: black;
+  background-color: #D9EDF7;
+}
+
+.box_yellow {
+  color: black;
+  background-color: #FCF7E3;
+}/*# sourceMappingURL=09-scss.css.map */

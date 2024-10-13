@@ -1,0 +1,45 @@
+@use 'basic';
+
+.list {
+    
+    li {
+        list-style-type: none;
+        padding: 20px;
+        margin: 0px;
+        width: 400px;
+        border: 0.5px solid #eee;
+    }
+
+    .active:hover {
+        background-color: #007BFF;
+        color: white;
+    }
+}
+
+%btn {
+    p {
+        margin: 0px;
+    }
+    width: 700px;
+    padding: 20px;
+    margin: 10px;
+}
+
+@mixin btn_color($color) {
+    @extend %btn;
+    color: black;
+    background-color: $color
+}
+
+.box_green{
+    @include btn_color(#DFEFD8);
+}
+
+.box_blue {
+    @include btn_color(#D9EDF7);
+}
+
+.box_yellow {
+    @include btn_color(#FCF7E3);
+}
+

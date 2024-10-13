@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+    font-family: 'Pretendard';
+}
+
+div {
+    box-sizing: border-box;
+}
+
+@mixin columns($width) {
+    width: $width;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .col-1 {
+        @include columns(8.33)
+    }
+
+    .col-2 {
+        @include columns(16.67%)
+    }
+
+    .col-3 {
+        @include columns(25%)
+    }
+
+    .col-4 {
+        @include columns(33.33%)
+    }
+
+    .col-5 {
+        @include columns(41.67%)
+    }
+
+    .col-6 {
+        @include columns(50%)
+    }
+
+    .col-7 {
+        @include columns(58.33%)
+    }
+
+    .col-8 {
+        @include columns(66.67%)
+    }
+
+    .col-9 {
+        @include columns(75%)
+    }
+
+    .col-10 {
+        @include columns(83.33%)
+    }
+
+    .col-11 {
+        @include columns(91.67%)
+    }
+
+    .col-12 {
+        @include columns(100%)
+    }
+}
