@@ -47,4 +47,50 @@ div {
 }
 .row .col-12 {
   width: 100%;
+}
+
+.box_yellow {
+  background-color: #FEF3CD;
+  padding: 15px 20px;
+  color: #7c671b;
+  border-radius: 5px;
+  width: 600px;
+  float: left;
+  margin-bottom: 15px;
+  line-height: 20px;
+  display: none;
+}
+.box_yellow i {
+  float: right;
+  line-height: inherit;
+}
+
+.box_blue {
+  background-color: #CEE1FF;
+  padding: 15px 20px;
+  color: #183462;
+  border-radius: 5px;
+  width: 600px;
+  float: left;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+.box_blue i {
+  float: right;
+  line-height: inherit;
+}
+
+.box_grey {
+  background-color: #E2E2E5;
+  padding: 15px 20px;
+  color: #68686a;
+  border-radius: 5px;
+  width: 600px;
+  float: left;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+.box_grey i {
+  float: right;
+  line-height: inherit;
 }/*# sourceMappingURL=01-index.css.map */

@@ -1,1 +1,29 @@
 @use "./basic";
+
+@mixin alert-box($box-color, $font-color) {
+    background-color: $box-color;
+    padding: 15px 20px;
+    color: $font-color;
+    border-radius: 5px;
+    width: 600px;
+    float: left;
+    margin-bottom: 15px;
+    line-height: 20px;
+    i {
+        float: right;
+        line-height: inherit;
+    }
+}
+
+.box_yellow {
+    @include alert-box(#FEF3CD, #7c671b);
+    display: none;
+}
+
+.box_blue {
+    @include alert-box(#CEE1FF, #183462);
+}
+
+.box_grey {
+    @include alert-box(#E2E2E5, #68686a);
+}
