@@ -1,0 +1,150 @@
+@use "./basic";
+
+.side_bar {
+    position: fixed;
+    height: 100%;
+    width: 150px;
+    background-color: #484BB3;
+    color: white;
+    z-index: 5;
+    transform: translateX(-100px);
+    transition: all 0.5s;
+}
+
+.side_bar div {
+    margin: 15px 0px 0px 15px;
+}
+
+.side_bar i {
+    transition: all 0.5s;
+    transform: translateX(100px);
+}
+
+.side_bar:hover {
+    transform: translateX(0px);
+}
+
+.side_bar:hover i {
+    transform: translateX(0px);
+}
+
+.contents {
+    margin-left: 50px;
+    height: 100%;
+}
+
+.input_ani {
+    // transition: all 0.5s;
+    width: 150px;
+}
+
+.input_ani:focus {
+    transition: all 0.5s ease;
+    width: 300px;
+}
+
+.icon_container i {
+    margin-right: 20px;
+    position: relative;
+}
+
+.size {
+    color: white;
+    font-size: 10px;
+    float: left;
+}
+
+.main_container {
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin box_style($border-color) {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 15px 20px;
+    background-color: white;
+    box-shadow: 3px 3px 5px lightgrey;
+    border-radius: 5px;
+    border-left: 5px solid $border-color;
+
+    div {
+        display: inline-block;
+    }
+
+    i {
+        font-size: 30px;
+        align-content: center;
+    }
+}
+
+.navy_box {
+    @include box_style(#4E51B5);
+}
+
+.skyblue_box {
+    @include box_style(#95D3ED);
+}
+
+.green_box {
+    @include box_style(#3FC95A);
+}
+
+.yellow_box {
+    @include box_style(#FECA54);
+}
+
+.list_group {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 3px 3px 8px lightgrey;
+}
+
+@mixin list_style($background-color, $weight) {
+    background-color: $background-color;
+    padding: 10px 15px;
+    font-weight: $weight;
+}
+
+.list_header {
+    @include list-style(#FAFAFA, 600);
+    border-bottom: 1px solid lightgrey;
+}   
+
+.list_item {
+    @include list_style(#ffffff, Normal);
+}
+
+.list_item_align {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.list_item_align span {
+    align-content: center;
+}
+
+@media screen and (max-width: 992px) {
+    .row .col-3 {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row .col-3 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .row .col-8 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .row .col-4 {
+        width: 100%;
+    }
+}
