@@ -1,32 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
     <link rel="stylesheet" href="./css/01-index.css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/0505fffc97.js" crossorigin="anonymous"></script>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div id=alert1 class="box_yellow">
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-        <i onclick="document.getElementById('alert1').style.display = 'none';" id="close" class="fa-solid fa-xmark"></i>
+<body class="lightMode">
+    <div class="black-bg">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <form action="01-successs.html">
+                <div class="my-3">
+                    <input id="identify" type="text" class="form-control">
+                </div>
+                <div class="my-3">
+                    <input id="password" type="password" class="form-control">
+                </div>
+                <button type="submit" class="submitBtn" id="send">전송</button>
+                <button type="button" class="closeBtn" id="close">닫기</button>
+            </form>
+        </div>
     </div>
-    <div id=alert2 class="box_blue">
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-        <i class="fa-solid fa-xmark"></i>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">Navbar</span>
+            <div>
+                <span class="badge bg-primary me-3" id="mode">Light ✨</span>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <ul class="list-group" style="display: none;">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <button class="loginBtn">로그인</button>
+
+    <div class="alert alert-danger">
+        5초 이내 구매시 사은품 증정!
     </div>
-    <div id=alert3 class="box_grey">
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-        <i class="fa-solid fa-xmark"></i>
-    </div>
-    <button onclick="document.getElementById('alert1').style.display = 'block';">Open</button>
+
+    <script>
+
+        // dark mode & light mode
+        var count = 0;
+        $('.badge').on('click', function () {
+            count++;
+            if (count % 2 == 0) {
+                $('body').removeClass('darkMode');
+                $('.navbar').removeClass('navbar-dark');
+                $('.navbar').removeClass('bg-dark');
+                $('.badge').removeClass('bg-dark');
+                $('body').addClass('lightMode');
+                $('.navbar').addClass('navbar-light');
+                $('.navbar').addClass('bg-light');
+                $('.badge').addClass('bg-primary');
+                $('#mode').html('Light ✨');
+            }
+            else {
+                $('body').removeClass('lightMode');
+                $('.navbar').removeClass('navbar-light');
+                $('.navbar').removeClass('bg-light');
+                $('.badge').removeClass('bg-primary');
+                $('body').addClass('darkMode');
+                $('.navbar').addClass('navbar-dark');
+                $('.navbar').addClass('bg-dark');
+                $('.badge').addClass('bg-dark');
+                $('#mode').html('Dark 🌙');
+            }
+        })
+
+        // nav-toggle animation
+        $('.navbar-toggler').on('click', function () {
+            $('.list-group').slideToggle('slow');
+        });
+
+        // modal open button animation
+        $('.loginBtn').on('click', function () {
+            $('.black-bg').addClass('show_modal');
+            $('.white-bg').addClass('white-transition');
+        });
+
+        // modal close button animation
+        $('#close').on('click', function () {
+            $('.white-bg').removeClass('white-transition');
+            $('.black-bg').removeClass('show_modal');
+        });
+
+        // modal login submit function
+        $('#send').on('click', function (e) {
+
+            if ($('#identify').val() == '' && $('#password').val() == '') {
+                // prevent form submit 
+                e.preventDefault();
+                // show alert window
+                alert("ID / Password is empty");
+            }
+
+            else if ($('#identify').val() == '') {
+                // prevent form submit 
+                e.preventDefault();
+                // show alert window
+                alert("ID is empty");
+            }
+
+            else if ($('#password').val() == '') {
+                // prevent form submit 
+                e.preventDefault();
+                // show alert window
+                alert("Password is empty");
+            }
+
+            if (/\S+@\S+\.\S+/.test($('#identify').val()) == false) {
+                e.preventDefault();
+                alert("The ID must be forming into an email");
+            }
+
+            else if (/[A-Z]/.test($('#password').val()) == false) {
+                e.preventDefault();
+                alert("The Password must be include at least one uppercase character.");
+            }
+
+            if ($('#password').val().length < 6) {
+                e.preventDefault();
+                alert("Password length must be over 6 characters.");
+            }
+
+
+
+
+        });
+
+        // X초 마다 function을 실행.
+        let time = 0;
+        const intervalid = setInterval(function () {
+            time++;
+            $('.alert').html(`${5 - time}초 이내 구매시 사은품 증정!`);
+
+            if (time >= 5) {
+                clearInterval(intervalid);
+            }
+        }, 1000);
+
+        // X초 후에 function을 실행.
+        setTimeout(function () {
+            $('.alert').addClass('display-none');
+        }, 5000);
+
+        
+
+
+
+    </script>
 </body>
 
 </html>
